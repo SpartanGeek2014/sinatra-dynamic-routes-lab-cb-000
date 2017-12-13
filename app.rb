@@ -23,13 +23,13 @@ class App < Sinatra::Base
   get '/say/:word1/:word2/:word3/:word4/:word5' do
     "#{params[:word1]} #{params[:word2]} #{params[:word3]} #{params[:word4]} #{params[:word5]}."
   end
-
+  # For whatever reason, I had the most probs with this part
   get '/:operation/:number1/:number2' do
     number1 = params[:number1].to_i
     number2 = params[:number2].to_i
 
     answer = 'Unable to perform this operation'
-
+    # I nearly blew a gasket working this part out.
     case params[:operation]
     when 'add'
       answer = (number1 + number2).to_s
