@@ -30,7 +30,7 @@ class App < Sinatra::Base
 
     answer = 'Unable to perform this operation'
     # I nearly blew a gasket working this part out.
-    case params[@operation]
+    case params[:operation]
     when 'add'
       answer = (number1 + number2).to_s
     when 'subtract'
